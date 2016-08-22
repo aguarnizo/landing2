@@ -5,16 +5,12 @@
         <title>Validaciones con Javascript</title>
         <meta http-equiv="content-type" content="text/html"; charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
-        <link rel="stylesheet" type="text/css" href="css/po.css">
-        <style type="text/css">
-            label.error{color:#f00; font-weight:bold; padding: 0 5px;} 
-        </style>
         
     </head>
     
     <body>
         <div class="container">
-            <h1>Formulario de Test</h1>
+            <h1>Formulario de Contacto</h1>
             <hr />
             <div class="formulario">
                 <h2>BACKUP</h2>
@@ -300,24 +296,11 @@
                     <label>Email:*</label><br>
                     <input type="text" name="email" id="email" value="" ><br>
                     
-                    <!--<label for="">Acepto las Condiciones</label><br>-->
-                    <a href="#popup" class="popup-link">Aceptar las Condiciones</a>
-					<input type="checkbox" name="popups" id="popups" value="popups" onclick="ventana()" ><br>
-					<input type="submit" class="submit" value="Solicitar Demo" id="buttons" />
-					
-					<div class="modal-wrapper" id="popup">
-						<div class="popup-contenedor">
-						<!--<h2>Titulo de la Modal</h2>
-						<p>Giovinco</p>-->
-					<iframe src="http://www.ikonosoft.com/ikonosoft-backup/terminos-y-condiciones" style="width: 100%; height: 600px;" name="formularios"></iframe>
-	   
-					<a class="popup-cerrar" href="#">X</a>
-					</div>
-					</div>
-                    <!--<input type="checkbox" name="popups" id="popups" value="popups" onclick="ventana()" ><br>-->
+                    <label for="">Acepto las Condiciones</label><br>
+                    <input type="checkbox" name="popup" id="popup" value="popup" onclick="ventana()" ><br>
                     
-                    <!--<input type="submit" class="submit" value="Enviar Datos" id="buttons" ><br>
-                    <input type="reset"  value="Limpiar" id="borrar"><br>-->
+                    <input type="submit" class="submit" value="Enviar Datos" id="buttons" ><br>
+                    <input type="reset"  value="Limpiar" id="borrar"><br>
                     
                     <div id="alert">Hola</div>
                     
@@ -362,7 +345,7 @@
                                     required:true,
                                     email:true
                                 },
-                                popups:{
+                                popup:{
                                     required:true
                                 }
                             },
@@ -371,7 +354,6 @@
                                 
                                  nombre:{
                                     required:"Ingresa un nombre"
-                                    
                                     //minlength:5
                                 },
                                 celular:{
@@ -391,7 +373,7 @@
                                     required: "Ingresa un email",
                                     email:"Ingresa un email válido",
                                 },
-                                popus:{
+                                popup:{
                                     required:"Debe aceptar los términos y condiciones"
                                 }
                                 

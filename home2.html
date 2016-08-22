@@ -2,43 +2,38 @@
 
 <html>
     <head>
-        <title>Validaciones con Javascript</title>
-        <meta http-equiv="content-type" content="text/html"; charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
-        <link rel="stylesheet" type="text/css" href="css/po.css">
-        <style type="text/css">
-            label.error{color:#f00; font-weight:bold; padding: 0 5px;} 
-        </style>
-        
+        <title>I</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">         
     </head>
     
-    <body>
-        <div class="container">
-            <h1>Formulario de Test</h1>
-            <hr />
-            <div class="formulario">
-                <h2>BACKUP</h2>
+    <body>    
+                 <div class="container">
                 <hr />
-                <form action="guardar.php" method="post" id="formulario" >
-                    <label>Nombre:*</label><br>
-                    <input type="text" name="nombre" id="nombre" value="" ><br>
+                <div class="formulario">
+                <center>Solicitar Demo</center>
+                <hr />
+                
+                <form action="datosEnviados.php" method="post" id="formulario">
+                    <label>Nombre y Apellidos:*</label><br />
+                    <input type="text" name="nombre" id="nombre" value="" placeholder="Nombre y Apellidos" /><br />
                     
-                    <label>Celular de Contacto:*</label><br>
-                    <input type="text" name="celular" id="celular" value="" ><br>
+                    <label>Celular de Contacto:*</label><br />
+                    <input type="text" name="celular" id="celular" value="" /><br />
                     
-                    <label>Empresa:*</label><br>
-                    <input type="text" name="empresa" id="empresa" value="" ><br>
+                    <label>Empresa:*</label><br />
+                    <input type="text" name="empresa" id="empresa" value="" /><br />    
                     
-                    <label>Tamaño de la Empresa:*</label><br>
-                    <select name="tamano" id="tamano">
+                    <label>Tamaño de la Empresa:*</label><br />
+                    <select name="tamano" id="tamano"><br />
                         <option value="">Seleccione el Tipo de Empresa</option>
                         <option>Pequeña</option>
                         <option>Mediana</option>
                         <option>Grande</option>      
-                    </select><br>
+                    </select><br />
                 
-                    <label>País:*</label><br>
-                    <select name="pais" id="pais">
+                    <label>País:*</label><br />
+                    <select name="pais" id="pais"><br />
                         <option value="">Seleccione el país</option>
                         <option>Afganistán</option>
                         <option>Akrotiri</option>
@@ -293,50 +288,55 @@
                         <option>Yemen</option>
                         <option>Yibuti</option>
                         <option>Zambia</option>
-                        <option>Zimbabue</option>
+                        <option>Zimbabue</option>     
+                    </select><br />
+                    <label>Email:*</label><br />
+                    <input type="text" name="email" id="email" value="" /><br />
+                    
+                    <!--<label for="">Acepto las Condiciones</label><br />-->
+                    <a href="http://www.ikonosoft.com/ikonosoft-backup/terminos-y-condiciones" target="_blank" onclick="window.open(this.href, this.target, 'width=300,height=400'); return false;">Acepto las Condiciones</a>
+                    <input type="checkbox" name="popup" id="popup" value="popup" onclick="ventanas()" />
+                    
+                    <input type="submit" class="submit" value="Solicitar Demo" id="buttons" />
+                    <!--<input type="reset"  value="Limpiar" id="borrar" />-->
+                    
                         
-                        
-                    </select><br>
-                    <label>Email:*</label><br>
-                    <input type="text" name="email" id="email" value="" ><br>
-                    
-                    <!--<label for="">Acepto las Condiciones</label><br>-->
-                    <a href="#popup" class="popup-link">Aceptar las Condiciones</a>
-					<input type="checkbox" name="popups" id="popups" value="popups" onclick="ventana()" ><br>
-					<input type="submit" class="submit" value="Solicitar Demo" id="buttons" />
-					
-					<div class="modal-wrapper" id="popup">
-						<div class="popup-contenedor">
-						<!--<h2>Titulo de la Modal</h2>
-						<p>Giovinco</p>-->
-					<iframe src="http://www.ikonosoft.com/ikonosoft-backup/terminos-y-condiciones" style="width: 100%; height: 600px;" name="formularios"></iframe>
-	   
-					<a class="popup-cerrar" href="#">X</a>
-					</div>
-					</div>
-                    <!--<input type="checkbox" name="popups" id="popups" value="popups" onclick="ventana()" ><br>-->
-                    
-                    <!--<input type="submit" class="submit" value="Enviar Datos" id="buttons" ><br>
-                    <input type="reset"  value="Limpiar" id="borrar"><br>-->
-                    
-                    <div id="alert">Hola</div>
-                    
                 </form>
                 
                 
+                
+                 <!--Validación de Formulario e importación de librerias--> 
                 <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
                 <script type="text/javascript" src="js/jquery.validate.js"></script>
                 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
                 <script type="text/javascript">
                     //función para abrir ventana emergente
+                    $(document).on('ready',ventana);
                     function ventana(){
                         //if("#popup".prop('checked')){
                         //window=this.open(pagina,'width=400,height=200,top=300,left=700,toolbar=no');  
                         //return true;
+                        if($('input[name=popup]').is(':checked')){
                         window.open('mostrar.php','nuevaVentana','width=400,height=200,top=300,left=700,toolbar=no')
-                        
+                            return true;
+                        }
+                        else{
+                            return false;
+                        }
                     }
+                    
+                    $('#popup').change(function(){
+                            var c=$(this).attr("checked");
+                            if(checkeado){
+                                alert('activado');
+                            }else{
+                                alert('desactivado');
+                            }
+                        });
+                    
+                    
                     $(document).ready(function(){
+                        
                         $("#formulario").validate({
                             //reglas
                             rules:{
@@ -362,7 +362,7 @@
                                     required:true,
                                     email:true
                                 },
-                                popups:{
+                                popup:{
                                     required:true
                                 }
                             },
@@ -371,7 +371,6 @@
                                 
                                  nombre:{
                                     required:"Ingresa un nombre"
-                                    
                                     //minlength:5
                                 },
                                 celular:{
@@ -391,19 +390,14 @@
                                     required: "Ingresa un email",
                                     email:"Ingresa un email válido",
                                 },
-                                popus:{
+                                popup:{
                                     required:"Debe aceptar los términos y condiciones"
-                                }
-                                
-                            }
-                                
-                                
-                                
+                                }  
+                            }              
                         });
                     });
-                    
                 </script>
-            </div>
+                 </div>
         </div>
     </body>
 </html>

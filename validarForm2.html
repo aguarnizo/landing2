@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Validaciones con Javascript</title>
+        <meta http-equiv="content-type" content="text/html"; charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    </head>
+    
+    <body>
+        <div class="container">
+            <h1>Formulario de Contacto</h1>
+            <hr />
+            <div class="formulario">
+                <h2>BACKUP</h2>
+                <hr />
+                <form action="" method="post" onsubmit="javascript:Validar(this);">
+                    <label>Nombre:*</label><br>
+                    <input type="text" name="nombre" id="nombre" value="" onblur="javascript:Validar();"><br>
+                    
+                    <label>Celular de Contacto:*</label><br>
+                    <input type="text" name="celular" id="celular" value="" onblur="javascript:Validar();"><br>
+                    
+                    <label>Empresa:*</label><br>
+                    <input type="text" name="empresa" id="empresa" value="" onblur="javascript:Validar();"><br>
+                    
+                    <label>Tamaño de la Empresa:*</label><br>
+                    <select name="tamano" id="tamano">
+                        <option>Seleccione el Tipo de Empresa</option>
+                        <option>Pequeña</option>
+                        <option>Mediana</option>
+                        <option>Grande</option>      
+                    </select><br>
+                
+                    <label>País:*</label><br>
+                    <select name="pais" id="pais">
+                        <option>Seleccione el país</option>
+                        <option>Afganistán</option>
+                        <option>Akrotiri</option>
+                        <option>Albania</option> 
+                        <option>Alemania</option>
+                        <option>Andorra</option>
+                        <option>Angola</option>
+                        <option>Anguila</option>
+                        <option>Antártida</option>
+                        <option>Antigua y Barbuda</option>
+                        <option>Antillas Neerlandesas</option>
+                        <option>Arabia Saudí</option>
+                        <option>Arctic Ocean</option>
+                        <option>Argelia</option>
+                        <option>Argentina</option>
+                        <option>Armenia</option>
+                        <option>Aruba</option>
+                        <option>Ashmore andCartier Islands</option>
+                        <option>Atlantic Ocean</option>
+                        <option>Australia</option>
+                        <option>Austria</option>
+                        <option>Azerbaiyán</option>
+                        <option>Bahamas</option>
+                        <option>Bahráin</option>
+                        <option>Bangladesh</option>
+                        <option>Barbados</option>
+                        <option>Bélgica</option>
+                        <option>Belice</option>
+                        <option>Benín</option>
+                        <option>Bermudas</option>
+                        <option>Bielorrusia</option>
+                        <option>Birmania Myanmar</option>
+                        <option>Bolivia</option>
+                        <option>Bosnia y Hercegovina</option> 
+                        <option>Botsuana</option>
+                        <option>Brasil</option>
+                        <option>Brunéi</option>
+                        <option>Bulgaria</option>
+                        <option>Burkina Faso</option>
+                        <option>Burundi</option>
+                        <option>Bután</option>
+                        <option>Cabo Verde</option>
+                        <option>Camboya</option>
+                        <option>Camerún</option>
+                        <option>Canadá</option>
+                        <option>Chad</option>
+                        <option>Chile</option>
+                        <option>China</option>
+                        <option>Chipre</option>
+                        <option>Clipperton Island</option>
+                        <option>Colombia</option>
+                        <option>Comoras</option>
+                        <option>Congo</option>
+                        <option>Coral Sea Islands</option>
+                        <option>Corea del Norte</option>
+                        <option>Corea del Sur</option>
+                        <option>Costa de Marfil</option>
+                        <option>Costa Rica</option>
+                        <option>Croacia</option>
+                        <option>Cuba</option>
+                        <option>Dhekelia</option>
+                        <option>Dinamarca</option>
+                        <option>Dominicana</option>
+                        <option>Ecuador</option>
+                        <option>Egipto</option>
+                        <option>El Salvador</option>
+                        <option>El Vaticano</option>
+                        <option>Emiratos Árabes Unidos</option>
+                        <option>Eritrea</option>
+                        <option>Eslovaquia</option>
+                        <option>Eslovenia</option>
+                        <option>España</option>
+                        <option>Estados Unidos</option> 
+                        <option>Estonia</option>
+                        <option>Etiopía</option>
+                        <option>Filipinas</option>
+                        <option>Finlandia</option>
+                        <option>Fiyi</option>
+                        <option>Francia</option>
+                        <option>Gabón</option>
+                        <option>Gambia</option>
+                        <option>Gaza Strip</option>
+                        <option>Georgia</option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option> 
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option> 
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option> 
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option> 
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option> 
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option> 
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                    </select><br>
+                    <label>Email:</label><br>
+                    <input type="text" name="email" id="email" value="" onblur="javascript:Validar();"><br>
+                    
+                    <label for="">Acepto las Condiciones</label><br>
+                    <input type="checkbox" name="popup" id="popup" value="popup" onclick="ventana()"><br>
+                    
+                    <input type="submit" value="Enviar Datos" id="buttons"><br>
+                    
+                    <div id="alert">Hola</div>
+                    
+                </form>
+                
+                <script type="text/javascript">
+                   
+                    
+                    //funciona para el boton
+                    $(document).ready(function(){
+                        $('#button').click(function(){    
+                        if($('input[name=popup]').is(':checked')){
+                        alert('La politica de privacidad ha sido aceptada');
+                        return true;
+                    }
+                        else{
+                        alert('Debe aceptar la politica de privacidad');
+                        return false;
+                    }
+                    });
+                    });
+                    
+                    function ventana(){
+                        window.open('mostrar.php','ventana','width=400,height=200,toolbar=no')
+                        
+                        
+                    }
+                    
+                    function Validador(email){
+                        var tester=/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-]+)\.)+([a-zA-Z0-9]{2,4})+$/;
+                        return tester.test(email);
+                    }
+                    function Validar(){
+                        var nombre=document.getElementById('nombre').value;
+                        var celular=document.getElementById('celular').value;
+                        var empresa=document.getElementById('empresa').value;
+                        var tamano=document.getElementById('tamano').value;
+                        var pais=document.getElementById('pais').value;
+                        var email=document.getElementById('email').value;
+                        
+                        
+                        
+                        
+                        
+                        
+                        if(nombre==""){
+                            $('#alert').html('Debes ingresar un Nombre').slideDown(500);
+                            $('#nombre').focus();
+                            //la validacion se rompe y no continua avanzando
+                            return false;
+                        }
+                        else{
+                            $('#alert').html('').slideDown(300);
+                        }
+                        
+                        if(celular==""){
+                            $('#alert').html('Debes ingresar un Número de Celular').slideDown(500);
+                            $('#celular').focus();
+                            //la validacion se rompe y no continua avanzando
+                            return false;
+                        }
+                        else{
+                            $('#alert').html('').slideDown(300);
+                        }
+                        
+                        
+                         
+                        
+                        if(email==""){
+                            $('#alert').html('Debes ingresar un Email').slideDown(500);
+                            $('#email').focus();
+                            //la validacion se rompe y no continua avanzando
+                            return false;
+                        }
+                        else{
+                            $('#alert').html('').slideDown(300);
+                        }
+                        
+                        if(Validador(email)==false){
+                            $('#alert').html('Ingresa un Email Valido').slideDown(500);
+                            $('#email').focus();
+                            //la validacion se rompe y no continua avanzando
+                            return false;
+                        }
+                        else{
+                            $('#alert').html('').slideDown(300);
+                        }
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        if(tamano==null||tamano==""){
+                            $('#alert').html('Selecciona un País').slideDown(500);
+                            $('#tamano').focus();
+                            //la validacion se rompe y no continua avanzando
+                            return false;
+                        }
+                        else{
+                            $('#alert').html('').slideDown(300);
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
